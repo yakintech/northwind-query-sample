@@ -92,4 +92,19 @@ end
 
 exec sp_addProductWithCompanyName 'Siemens-2',2000,'DEU Products'
 
+--drop anahtar kelimesi sql objesini silmemi saðlar
+drop proc sp_InsertCategory
 
+--dýþarýdan bir fiyat alan ve o fiyattan büyük kaç adet ürün olduðunu BANA RETURN EDEN STORE PROCEDURE
+create procedure sp_getProductsCountByPrice(@price money)
+as
+begin
+return (select COUNT(*) from Products where UnitPrice > @price)
+end
+
+
+declare @productCount int
+exec @productCount = sp_getProductsCountByPrice 20
+
+--print(@productCount)
+select @productCount
