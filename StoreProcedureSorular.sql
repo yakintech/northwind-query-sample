@@ -87,18 +87,19 @@ begin
 select 
 o.OrderID,
 c.CompanyName,
-c.ContactTitle
---od.Quantity * od.UnitPrice
+c.ContactTitle,
+SUM(od.Quantity * od.UnitPrice)
 from Orders as o
 inner join Customers as c
 on o.CustomerID = c.CustomerID
 inner join [Order Details] as od
 on o.OrderID = od.OrderID
 where YEAR(o.OrderDate) = @year
+group by o.OrderID, c.CompanyName, c.ContactTitle
 end
 
 
-
+exec sp_GetOrdersDetailByYear 1996
 
 
 --Geciken sipariþleri bana veren store procedure
