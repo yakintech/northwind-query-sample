@@ -70,9 +70,14 @@ on b.ID = ba.BookID
 -- Bir eğitmen aynı anda iki bölüme ait olabilir.
 -- Bir öğrencinin sadece bir bölümü vardır.
 
+--Sorgular
 -- Öğrenci Ad, Soyad, Bölüm Ad, Fakülte Ad
 -- Eğitmen Ad, Bölüm Ad
 -- Fen Fakültesindeki EĞİTMENLERİ LİSTELE
+-- Fakülte ekleyen bir store procedure yaz
+-- Herhangi bir fakülte eklendiğinde ekrana 'Yeni bir fakülte eklendi!' yazsın (TRIGGER)
+-- Bölüm ID, Ad, Fakülte Ad isimli 3 kolonu olan bir VIEW yaz
+
 
 
 
