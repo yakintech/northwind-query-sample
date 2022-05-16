@@ -1,0 +1,8 @@
+-- ETicaret Veritabanı
+-- Ürünün kendine ait 5 kolonu olacak
+-- ÜRünün birden fazla kategorisi olabilir.
+-- Her kategorinin üst veya alt kategorisi olabilir.
+-- Kullanıcıların en az 4 kolonu olacak.
+-- Kullanıcılar ürünleri favoriye ekleyebilecek. ( Favori tablosu )
+-- Kullanıcılar siteden bir veya birden fazla ürün alabilir. (Sipariş, sipariş detay tabloları)
+-- Şehir ve ilçe tabloları olacak. siparişin ilçe id si olacak **
